@@ -18,11 +18,9 @@ async function criaVideo(titulo, descricao, url, imagem) {
             imagem: imagem
         })
     });
-    
-    if(!conexao.ok) {
-        throw new Error("Não foi possível enviar o vídeo");
+    if (!conexao.ok) {
+        throw new Error("Não foi possível enviar o vídeo")
     }
-
     const conexaoConvertida = conexao.json();
 
     return conexaoConvertida;
@@ -35,7 +33,7 @@ async function buscaVideo(termoDeBusca) {
     return conexaoConvertida;
 }
 
-export const conectaAPI = {
+export const conectaApi = {
     listaVideos,
     criaVideo,
     buscaVideo

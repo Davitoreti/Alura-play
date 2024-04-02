@@ -1,10 +1,10 @@
-import { conectaAPI } from "./conectaAPI.js";
+import { conectaApi } from "./conectaApi.js";
 import constroiCard from "./mostrarVideos.js";
 
 async function buscarVideo(evento) {
     evento.preventDefault();
     const dadosDePesquisa = document.querySelector("[data-pesquisa]").value;
-    const busca = await conectaAPI.buscaVideo(dadosDePesquisa);
+    const busca = await conectaApi.buscaVideo(dadosDePesquisa);
 
     const lista = document.querySelector("[data-lista]");
 
